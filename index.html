@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Packaged Woman | 2026 Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-gold: #C5A059;
+            --brand-cream: #F9F7F2;
+            --brand-charcoal: #1A1A1A;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-cream);
+            color: var(--brand-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(249, 247, 242, 0.8);
+            backdrop-filter: blur(10px);
+            border-b: 1px solid rgba(197, 160, 89, 0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--brand-charcoal);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background: var(--brand-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 0.75rem;
+                font-weight: 600;
+            }
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(26, 26, 26, 0.7);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-gold);
+        }
+
+        .btn-join {
+            background: var(--brand-gold);
+            color: white !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 99px;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            padding-top: 160px;
+            padding-bottom: 80px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(249, 247, 242, 0.8), var(--brand-cream));
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--brand-gold);
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .italic-gold {
+            font-style: italic;
+            color: var(--brand-gold);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: rgba(26, 26, 26, 0.7);
+        }
+
+        .hero-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .hero-btns { flex-direction: row; }
+        }
+
+        .btn-primary {
+            background: var(--brand-charcoal);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover { background: var(--brand-gold); }
+
+        .btn-outline {
+            border: 1px solid rgba(26, 26, 26, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover { border-color: var(--brand-gold); background: white; }
+
+        /* Pillars */
+        .section-padding { padding: 100px 0; }
+        .text-center { text-align: center; }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (min-width: 768px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 1024px) { .pillars-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+        .pillar-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .pillar-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--brand-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-card.active {
+            background: var(--brand-charcoal);
+            color: white;
+            transform: scale(1.03);
+            z-index: 10;
+        }
+
+        .pillar-card.active .pillar-icon {
+            background: var(--brand-gold);
+            color: white;
+        }
+
+        .pillar-details {
+            display: none;
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+        }
+
+        .pillar-card.active .pillar-details {
+            display: block;
+        }
+
+        /* Roadmap */
+        .roadmap-section {
+            background: var(--brand-charcoal);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .month-nav {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .month-btn {
+            background: rgba(255,255,255,0.05);
+            border: none;
+            color: rgba(255,255,255,0.4);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            white-space: nowrap;
+        }
+
+        .month-btn.active {
+            background: var(--brand-gold);
+            color: white;
+        }
+
+        .roadmap-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .roadmap-content { grid-template-columns: 5fr 7fr; }
+        }
+
+        .month-big {
+            font-size: 6rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.05);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .theme-title {
+            color: var(--brand-gold);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .roadmap-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 2rem;
+        }
+
+        .roadmap-card img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .activity-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .activity-item {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid transparent;
+            transition: border 0.3s;
+        }
+
+        .activity-item:hover {
+            border-color: rgba(197, 160, 89, 0.3);
+        }
+
+        /* Footer / Contact */
+        footer {
+            background: var(--brand-charcoal);
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .contact-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .form-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2.5rem;
+            border-radius: 2rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0.75rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--brand-gold);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--brand-gold);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Utilities */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-8 { margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-circle">FP</div>
+                <span>Full Packaged <span class="italic-gold">Woman</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#vision">Vision</a>
+                <a href="#pillars">Pillars</a>
+                <a href="#program">2026 Program</a>
+                <a href="#contact" class="btn-join">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="vision" class="hero">
+        <div class="hero-bg">
+            <img src="https://picsum.photos/seed/spacious_interior/1920/1080" alt="Background">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <span class="badge">Establishing Whole Women</span>
+            <h1>Balanced, Purposeful & <br><span class="italic-gold">God-Glorifying</span> Life</h1>
+            <p>To raise a global generation of spiritually grounded, emotionally whole, and purpose-driven women who glorify God in every sphere of life.</p>
+            <div class="hero-btns">
+                <a href="#program" class="btn-primary">Explore 2026 Program</a>
+                <a href="#pillars" class="btn-outline">Our 7 Pillars</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pillars" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="font-size: 3rem;">Our 7 <span class="italic-gold">Pillars</span></h2>
+                <p style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; font-weight: bold; opacity: 0.6;">The Foundation of Wholeness</p>
+            </div>
+
+            <div class="pillars-grid" id="pillarsContainer">
+                </div>
+        </div>
+    </section>
+
+    <section id="program" class="roadmap-section section-padding">
+        <div class="container">
+            <div class="mb-8">
+                <h2 style="font-size: 4rem;">2026 <span class="italic-gold">Roadmap</span></h2>
+                <p style="color: var(--brand-gold); text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.7rem; font-weight: bold;">A Year of Transformation</p>
+            </div>
+
+            <div class="month-nav no-scrollbar" id="monthNav">
+                </div>
+
+            <div class="roadmap-content" id="roadmapContent">
+                </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <h2 style="font-size: 3.5rem; line-height: 1.1;" class="mb-8">Let's Build <br><span class="italic-gold">Together</span></h2>
+                    <p style="opacity: 0.6; margin-bottom: 3rem;">Ready to embark on your journey to wholeness? Connect with us for mentorship, coaching, and community.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <small style="opacity: 0.4; text-transform: uppercase; letter-spacing: 0.1em;">Call Us</small>
+                                <p>677 273 516</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <small style="opacity: 0.4; text-transform: uppercase; letter-spacing: 0.1em;">Email</small>
+                                <p>lynda4te@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3 class="mb-8">Join the Community</h3>
+                    <form onsubmit="event.preventDefault(); alert('Message sent! (Demo)');">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <textarea placeholder="How can we help you?" rows="4" required></textarea>
+                        <button class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; opacity: 0.4;">
+                <p>FULL PACKAGED WOMAN</p>
+                <p>© 2026 ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const PILLARS = [
+            { id: 1, title: "Spiritual Foundation", goal: "Establish women who walk with God daily.", focus: ["Identity in Christ", "Prayer life", "Word-based living"], scripture: "John 15:5", icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>' },
+            { id: 2, title: "Inner Healing", goal: "Healed women who do not bleed on others.", focus: ["Healing trauma", "Forgiveness", "Self-worth"], scripture: "Psalm 147:3", icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>' },
+            { id: 3, title: "Character & Integrity", goal: "Strong character, not just strong gifts.", focus: ["Private integrity", "Discipline", "Ethics"], scripture: "Galatians 5:22", icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>' },
+            { id: 4, title: "Purpose & Impact", goal: "Discovering why you were created.", focus: ["Calling vs Career", "Gifts activation", "Service"], scripture: "Jeremiah 29:11", icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>' },
+            { id: 5, title: "Economic Empowerment", goal: "Raising financially wise women.", focus: ["Financial literacy", "Entrepreneurship", "Career growth"], scripture: "Proverbs 31:16", icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>' },
+            { id: 6, title: "Relationships & Family", goal: "Building wise women and healthy homes.", focus: ["Friendships", "Communication", "Parenting"], scripture: "Proverbs 24:3", icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' }
+        ];
+
+        const PROGRAM = [
+            { month: "January", theme: "Rooted Identity", focus: "Who Am I in Christ?", activities: ["Talk: 'From Labels to Legacy'", "Bible Study: Psalm 139", "Healing Prayer Night"], image: "https://picsum.photos/seed/identity_woman/1200/800" },
+            { month: "February", theme: "Intimacy & Discipline", focus: "Growing Deep Roots", activities: ["Teaching: 'Building Prayer Life'", "3-Day Fasting", "Quiet Retreat"], image: "https://picsum.photos/seed/prayer_woman/1200/800" },
+            { month: "March", theme: "Emotional Health", focus: "Healing the Woman Within", activities: ["Group Counseling Circles", "Forgiveness Session", "Nature Walk"], image: "https://picsum.photos/seed/mental_health_woman/1200/800" },
+            { month: "April", theme: "Financial Stewardship", focus: "Faithful with Little", activities: ["Wealth Workshop", "Budgeting Exercise", "Savings Group"], image: "https://picsum.photos/seed/finance_woman/1200/800" }
+        ];
+
+        // Initialize Pillars
+        const pContainer = document.getElementById('pillarsContainer');
+        PILLARS.forEach(p => {
+            const el = document.createElement('div');
+            el.className = 'pillar-card';
+            el.onclick = () => {
+                document.querySelectorAll('.pillar-card').forEach(c => c.classList.remove('active'));
+                el.classList.add('active');
+            };
+            el.innerHTML = `
+                <div class="pillar-icon">${p.icon}</div>
+                <h3>${p.title}</h3>
+                <p style="opacity: 0.6; font-size: 0.9rem;">${p.goal}</p>
+                <div class="pillar-details">
+                    <p style="color: var(--brand-gold); font-weight: bold; font-size: 0.7rem; text-transform: uppercase;">Focus</p>
+                    <ul style="list-style: none; font-size: 0.85rem; margin-bottom: 1rem;">
+                        ${p.focus.map(f => `<li>• ${f}</li>`).join('')}
+                    </ul>
+                    <p style="font-style: italic; font-size: 0.8rem; opacity: 0.8;">${p.scripture}</p>
+                </div>
+            `;
+            pContainer.appendChild(el);
+        });
+
+        // Initialize Roadmap
+        let currentMonth = 0;
+        const nav = document.getElementById('monthNav');
+        const roadmap = document.getElementById('roadmapContent');
+
+        function renderRoadmap() {
+            nav.innerHTML = '';
+            PROGRAM.forEach((p, i) => {
+                const btn = document.createElement('button');
+                btn.className = `month-btn ${i === currentMonth ? 'active' : ''}`;
+                btn.innerText = p.month.substring(0, 3);
+                btn.onclick = () => { currentMonth = i; renderRoadmap(); };
+                nav.appendChild(btn);
+            });
+
+            const data = PROGRAM[currentMonth];
+            roadmap.innerHTML = `
+                <div>
+                    <div class="month-big">${data.month}</div>
+                    <h3 class="theme-title">${data.theme}</h3>
+                    <p style="font-size: 1.5rem; font-style: italic; margin-bottom: 2rem; opacity: 0.7;">"${data.focus}"</p>
+                </div>
+                <div class="roadmap-card">
+                    <img src="${data.image}" alt="Theme">
+                    <div class="activity-grid">
+                        ${data.activities.map((a, i) => `
+                            <div class="activity-item">
+                                <span style="color: var(--brand-gold); font-weight: bold; display: block; margin-bottom: 0.5rem;">0${i+1}</span>
+                                <p>${a}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        renderRoadmap();
+    </script>
+</body>
+</html>
